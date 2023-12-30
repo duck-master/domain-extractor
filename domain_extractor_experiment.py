@@ -19,7 +19,7 @@ def extract_domains_from_file(file_path):
     """
     # input validation
     if not isinstance(file_path, str):
-        raise TypeError("file_path should be a str; got {type(file_path)} instead")
+        raise TypeError(f"file_path should be a str; got {type(file_path)} instead")
 
     # open the file
     with open(file_path, "r") as file:
@@ -46,7 +46,7 @@ def extract_domains_from_file_list(file_list):
     """
     # input validation
     if not isinstance(file_list, list):
-        raise TypeError("file_list should be a list; got {type(file_list)} instead")
+        raise TypeError(f"file_list should be a list; got {type(file_list)} instead")
 
     # prep
     result = {}
@@ -75,7 +75,7 @@ def make_domains_by_count_dict(domain_counts):
     """
     # input validation
     if not isinstance(domain_counts, dict):
-        raise TypeError("domain_counts should be a dict; got type {type(domain_counts)} instead")
+        raise TypeError(f"domain_counts should be a dict; got type {type(domain_counts)} instead")
 
     # main loop
     domains_by_popularity = {}
@@ -103,12 +103,12 @@ def print_domains_by_popularity(domains_by_popularity, threshold = 50):
     """
     # input validation
     if not isinstance(domains_by_popularity, dict):
-        raise TypeError("domains_by_popularity should be a dict; got type {type(domains_by_popularity)} instead")
-    elif not isinstance(threshold, (int, None)):
-        raise TypeError("threshold should be an int or None; got type {type(threshold)} instead")
+        raise TypeError(f"domains_by_popularity should be a dict; got type {type(domains_by_popularity)} instead")
+    elif not isinstance(threshold, (int, NoneType)):
+        raise TypeError(f"threshold should be an int or None; got type {type(threshold)} instead")
     elif isinstance(threshold, int):
         if threshold < 0:
-            raise ValueError("threshold should be nonnegative; got {threshold} instead")
+            raise ValueError(f"threshold should be nonnegative; got {threshold} instead")
 
     # prepare for main logic
     counts = list(domains_by_popularity.keys())
