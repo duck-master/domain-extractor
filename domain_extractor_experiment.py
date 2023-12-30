@@ -104,7 +104,7 @@ def print_domains_by_popularity(domains_by_popularity, threshold = 50):
     # input validation
     if not isinstance(domains_by_popularity, dict):
         raise TypeError(f"domains_by_popularity should be a dict; got type {type(domains_by_popularity)} instead")
-    elif not isinstance(threshold, (int, NoneType)):
+    elif not isinstance(threshold, (int, type(None))):
         raise TypeError(f"threshold should be an int or None; got type {type(threshold)} instead")
     elif isinstance(threshold, int):
         if threshold < 0:
