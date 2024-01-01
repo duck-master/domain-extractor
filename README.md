@@ -1,10 +1,11 @@
 # domain-extractor
 
 This is a relatively simple program to extract all domain names mentioned in a folder of text files.
+Dependencies: `urllib`, `os`
 
 ## Usage
 
-1. Install Python or a Python-supporting IDE if you don't have it already.
+1. Install Python 3 or a Python 3-supporting IDE if you don't have it already.
 2. Collect texts you want to analyze, and save each one as a text file, using the *.txt* extension, and all in the same folder at the top level.
 3. Download and/or copy/paste this program and save it in the same folder.
 4. Run the program in your Python shell. The results will appear on your screen immediately.
